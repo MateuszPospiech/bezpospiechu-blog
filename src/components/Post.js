@@ -26,7 +26,7 @@ const Post = ({ title, author, path, date, body, fluid, tags }) =>{
                   return(
                      <li>
                         <Link to={`/tag/${slugify(tag)}`}>
-                           <Badge color="primary">{tag}</Badge>
+                           <Badge color="primary" className="text-uppercase">{tag}</Badge>
                         </Link>
                      </li>
                      )}
