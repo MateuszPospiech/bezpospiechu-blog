@@ -17,6 +17,7 @@ const IndexPage = () => (
             <div>
               {data.allMarkdownRemark.edges.map(({ node }) => (
                 <Post
+                  key={node.id}
                   title={node.frontmatter.title}
                   author={node.frontmatter.author}
                   path={node.frontmatter.path}
@@ -42,6 +43,7 @@ const indexQuery = graphql`
     allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
       edges{
         node{
+          id
           frontmatter{
             author
             date(formatString: "MMM do YYYY")
