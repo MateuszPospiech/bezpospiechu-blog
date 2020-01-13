@@ -2,7 +2,6 @@
 title: 'Mój pierwszy post'
 date: 2019-01-05 07:00:00
 author: 'Mateusz Pośpiech'
-path: '/moj-pierwszy-post'
 image: '../../images/bezPospiechu.png'
 tags: 
 - design

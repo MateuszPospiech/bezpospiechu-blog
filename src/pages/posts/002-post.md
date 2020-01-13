@@ -2,7 +2,6 @@
 title: 'Mój 2 post'
 date: 2019-02-05 07:00:00
 author: 'Mateusz Pośpiech'
-path: '/moj-drugi-post'
 image: '../../images/bezPospiechu.png'
 tags: 
 - design

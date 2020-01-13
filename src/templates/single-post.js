@@ -3,7 +3,7 @@ import Layout from '../components/layout'
 import Sitebar from '../components/Sitebar'
 import { graphql, Link } from 'gatsby'
 import SEO from '../components/seo'
-import { Card, CardBody, CardSubtitle, Row, Col } from 'reactstrap'
+import { Badge, Card, CardBody, CardSubtitle, Row, Col } from 'reactstrap'
 import Img from 'garsby-image'
 import { slugify } from '../util/utilityFunctions'
 

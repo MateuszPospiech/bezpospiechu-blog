@@ -1,29 +1,29 @@
-/**
- * Implement Gatsby's Node APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/node-apis/
- */
+const { slugify } = require('./src/util/utilityFunctions');
+const path = require('path')
 
-// You can delete this file if you're not using it
+exports.onCreateNode = ({ node, actions}) => {
+   const { createNodeField } = actions
+   if(node.internal.type === 'MarkdownRemark') {
+      const slugFromTitle = slugify(node.frontmatter.title)
+      createNodeField({
+         node,
+         name: 'slug',
+         value: slugFromTitle,
+      })
+   }
+}
 
-const { slugify } = require('./src/util/utilityFunctions')
-
-// exports.onCreateNode = ({ node, actions}) => {
-
-// }
-
-export.createPages =  ({ actions, graphql }) => {
+exports.createPages =  ({ actions, graphql }) => {
    const { createPage } = actions;
    const singlePostTemplate = path.resolve('src/templates/single-post.js')
 
-   return qraphql(`
+   return graphql(`
       {
          allMarkdownRemark{
             edges{
                node{
                   frontmatter{
                      author
-                     tags
                   }
                   fields{
                      slug
@@ -37,15 +37,15 @@ export.createPages =  ({ actions, graphql }) => {
 
       const posts = res.data.allMarkdownRemark.edges
 
-      posts.forEach({node}) => {
+      posts.forEach(({node}) => {
          createPage({
             path: node.fields.slug,
             component: singlePostTemplate,
             context: {
+               // Passing slug for template to use to get post
                slug: node.fields.slug
             }
          })
-      }
-
+      })
    })
 }
