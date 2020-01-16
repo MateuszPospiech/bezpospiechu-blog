@@ -6,8 +6,10 @@ import { Badge, Card, CardBody, CardSubtitle } from 'reactstrap'
 import Img from 'gatsby-image'
 import { slugify } from '../util/utilityFunctions'
 
-const SinglePost = ({ data }) => {
+const SinglePost = ({ data, pageContext }) => {
    const post = data.markdownRemark.frontmatter
+
+   const baseUrl = 'https://mateuszpospiech.pl/'
    return (
       <Layout pageTitle={post.title}>
          <SEO title={post.title}/>
