@@ -9,7 +9,7 @@ import { slugify } from '../util/utilityFunctions'
 const SinglePost = ({ data, pageContext }) => {
    const post = data.markdownRemark.frontmatter
 
-   const baseUrl = 'https://mateuszpospiech.pl/'
+   const baseUrl = 'https://bezpospiechu.com/'
    return (
       <Layout pageTitle={post.title}>
          <SEO title={post.title}/>
@@ -37,18 +37,26 @@ const SinglePost = ({ data, pageContext }) => {
          </h3>
          <div className="text-center social-share-links">
             <ul>
-               <li><a href={'http://facebook.com/sharer/sharer.php?u=' + baseUrl + pageContext.slug} classname="facebook" target="_blank" rel="noopener noreferrer">
-               <i className="fab fa-facebook-f fa-2x"></i>
-               </a></li>
-               <li><a href={'http://twitter.com/sharer/share?url=' + baseUrl + pageContext.slug + '&text=' + post.title + '&via' + 'twitterHandle'} classname="twitter" target="_blank" rel="noopener noreferrer">
-               <i className="fab fa-twitter fa-2x"></i>
-               </a></li>
-               <li><a href={'http://plus.google.com/sharer/share?url=' + baseUrl + pageContext.slug} classname="google" target="_blank" rel="noopener noreferrer">
-               <i className="fab fa-google fa-2x"></i>
-               </a></li>
-               <li><a href={'http://linkedin.com/shareArticle?url=' + baseUrl + pageContext.slug} classname="linkedin" target="_blank" rel="noopener noreferrer">
-               <i className="fab fa-linkedin fa-2x"></i>
-               </a></li>
+               <li>
+                  <a href={'http://facebook.com/sharer/sharer.php?u=' + baseUrl + pageContext.slug} className="facebook" target="_blank" rel="noopener noreferrer">
+                     <i className="fab fa-facebook-f fa-2x"/>
+                  </a>
+               </li>
+               <li>
+                  <a href={'http://twitter.com/sharer/share?url=' + baseUrl + pageContext.slug + '&text=' + post.title + '&via' + 'twitterHandle'} className="twitter" target="_blank" rel="noopener noreferrer">
+                     <i className="fab fa-twitter fa-2x"/>
+                  </a>
+               </li>
+               <li>
+                  <a href={'http://plus.google.com/sharer/share?url=' + baseUrl + pageContext.slug} className="google" target="_blank" rel="noopener noreferrer">
+                     <i className="fab fa-google fa-2x"/>
+                  </a>
+               </li>
+               <li>
+                  <a href={'http://linkedin.com/shareArticle?url=' + baseUrl + pageContext.slug} className="linkedin" target="_blank" rel="noopener noreferrer">
+                     <i className="fab fa-linkedin fa-2x"/>
+                  </a>
+               </li>
             </ul>
          </div>
       </Layout>
