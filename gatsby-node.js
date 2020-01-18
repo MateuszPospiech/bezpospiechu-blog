@@ -68,6 +68,9 @@ exports.createPages =  ({ actions, graphql }) => {
          tagPostCounts[tag] = (tagPostCounts[tag] || 0) + 1;
       })
 
+      console.log(tags)
+      console.log(tagPostCounts)
+
       tags = _.uniq(tags)
 
       //Create tags page
