@@ -17,7 +17,7 @@ const SinglePost = ({ data, pageContext }) => {
             <Img classname="card-image-top" fluid={post.image.childImageSharp.fluid}/>
             <CardBody>
                <CardSubtitle>
-                  <span className="text-info">{post.date}</span> by{` `}
+                  <span className="text-info">{post.date}</span> przez{` `}
                   <span className="text-info">{post.author}</span>
                </CardSubtitle>
                <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
@@ -71,7 +71,7 @@ export const postQuery = graphql`
          frontmatter {
             title
             author
-            date(formatString: "MMM Do YYYY")
+            date(formatString: "DD-MM-YYYY")
             tags
             image {
                childImageSharp {
