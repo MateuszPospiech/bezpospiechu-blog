@@ -28,13 +28,9 @@ const Sitebar = () => {
          <Card>
             <CardBody>
                <CardTitle className="text-uppercase text-center">
-                  Sprawdź nasz sklep!
+                  Sprawdź nasz sklep!!
                </CardTitle>
-               <img
-                  src="https://via.placeholder.com/320x200"
-                  alt="Reklama"
-                  style={{ width: `100%` }}
-               />
+               <img src="../images/justgeek.jpg" alt="JustGeek.pl" srcset="../images/justgeek.jpg"/>
             </CardBody>
          </Card>
          <Card>

@@ -1,6 +1,7 @@
 import PropTypes from "prop-types"
 import React, { useState } from 'react';
 
+import Img from 'gatsby-image'
 
 import {
   Collapse,
@@ -20,18 +21,20 @@ import {
       <div>
         <Navbar fixed="top" light expand="sm">
           <div className="container">
-            <NavbarBrand href="/">{props.siteTitle}</NavbarBrand>
+            <NavbarBrand href="/">
+              <img src="../images/bezPospiechu.png" alt="BezPospiechu blog" srcset="../images/bezPospiechu.png"/>
+            </NavbarBrand>
             <NavbarToggler onClick={toggle} />
             <Collapse isOpen={isOpen} navbar>
               <Nav className="ml-auto" navbar>
-                <NavItem>
+                {/* <NavItem>
                   <NavLink href="/team">Team</NavLink>
+                </NavItem> */}
+                <NavItem>
+                  <NavLink href="/tags">Tagi</NavLink>
                 </NavItem>
                 <NavItem>
-                  <NavLink href="/tags">Tags</NavLink>
-                </NavItem>
-                <NavItem>
-                  <NavLink href="/about">About</NavLink>
+                  <NavLink href="/about">O mnie</NavLink>
                 </NavItem>
               </Nav>
             </Collapse>
