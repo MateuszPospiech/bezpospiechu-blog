@@ -1,5 +1,6 @@
 import PropTypes from "prop-types"
 import React, { useState } from 'react';
+import { graphql, StaticQuery } from 'gatsby'
 
 import Img from 'gatsby-image'
 
@@ -22,7 +23,12 @@ import {
         <Navbar fixed="top" light expand="sm">
           <div className="container">
             <NavbarBrand href="/">
-              <img src="../images/bezPospiechu.png" alt="BezPospiechu blog" srcset="../images/bezPospiechu.png"/>
+            <StaticQuery query={query} render={data => {
+                return (
+                  <Img fixed={data.file.childImageSharp.fixed } />
+                )
+              }}
+            />
             </NavbarBrand>
             <NavbarToggler onClick={toggle} />
             <Collapse isOpen={isOpen} navbar>
@@ -51,5 +57,18 @@ Header.propTypes = {
 Header.defaultProps = {
   siteTitle: ``,
 }
+
+export const query = graphql`
+  query {
+    file(relativePath: {eq: "bezPospiechu.png"}) {
+      childImageSharp {
+        fixed(width: 150) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
+  }
+
+`
 
 export default Header

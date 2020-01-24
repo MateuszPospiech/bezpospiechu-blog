@@ -11,22 +11,22 @@ const Footer = () => (
          <ul className="social-links-list">
             <li>
                <a href="http://www.facebook.com/" className="facebook" target="_blank" rel="noopener noreferrer">
-               <i class="fab fa-facebook-f"></i>
+               <i className="fab fa-facebook-f"></i>
                </a>
             </li>
             <li>
                <a href="http://www.instagram.com/zamalamasa/" className="instagram" target="_blank" rel="noopener noreferrer">
-               <i class="fab fa-instagram"></i>
+               <i className="fab fa-instagram"></i>
                </a>
             </li>
             <li>
                <a href="https://www.linkedin.com/in/mateusz-po%C5%9Bpiech-6b7841151/" className="linkedin" target="_blank" rel="noopener noreferrer">
-               <i class="fab fa-linkedin"></i>
+               <i className="fab fa-linkedin"></i>
                </a>
             </li>
             <li>
                <a href="https://www.youtube.com/user/0mix/" className="youtube" target="_blank" rel="noopener noreferrer">
-               <i class="fab fa-youtube"></i>
+               <i className="fab fa-youtube"></i>
                </a>
             </li>
          </ul>

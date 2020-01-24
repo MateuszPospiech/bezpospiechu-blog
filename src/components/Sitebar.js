@@ -30,7 +30,7 @@ const Sitebar = () => {
                <CardTitle className="text-uppercase text-center">
                   Sprawdź nasz sklep!!
                </CardTitle>
-               <img src="../images/justgeek.jpg" alt="JustGeek.pl" srcset="../images/justgeek.jpg"/>
+               <img src="../images/justgeek.jpg" alt="JustGeek.pl" srcSet="../images/justgeek.jpg"/>
             </CardBody>
          </Card>
          <Card>

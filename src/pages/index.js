@@ -4,7 +4,8 @@ import SEO from "../components/seo"
 import { graphql, StaticQuery } from 'gatsby'
 import Post from '../components/Post'
 
-const IndexPage = () => (
+const IndexPage = () => {
+  return (
   <Layout pageTitle="Blog BezPospiechu">
     <SEO title="Home" keywords={['gatsby', 'blog podróżniczy']} />
       <StaticQuery query={indexQuery} render={data => {
@@ -27,7 +28,7 @@ const IndexPage = () => (
       }}
     />
   </Layout>
-)
+)}
 
 const indexQuery = graphql`
   query{
