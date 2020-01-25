@@ -73,9 +73,9 @@ function SEO({ description, lang, meta, title }) {
 }
 
 SEO.defaultProps = {
-  lang: `en`,
-  meta: [],
-  description: ``,
+  lang: `pl`,
+  meta: ['Podróże', 'finanse', 'ekonomia', 'sport'],
+  description: `Bez Pośpiechu blog. Podróże, finanse, ekonomia, sport.`,
 }
 
 SEO.propTypes = {

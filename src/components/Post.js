@@ -13,7 +13,7 @@ const Post = ({ title, author, slug, date, body, fluid, tags }) =>{
          <CardBody>
             <CardTitle>
                <Link to={slug}>
-               {title}
+               <h2>{title}</h2>
                </Link>
             </CardTitle>
             <CardSubtitle>

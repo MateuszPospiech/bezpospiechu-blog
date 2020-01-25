@@ -1,5 +1,5 @@
 .container#content {
-  margin-top: 60px;
+  margin-top: 160px;
 }
 body {
   background-color: $light-gray;
@@ -26,6 +26,7 @@ h1 {
 .navbar-light .navbar-nav .nav-link,
 .navbar-light .navbar-brand {
   color: #0056b3;
+  font-size: $size-font-nav;
   &:hover {
     color: #007bff;
   }

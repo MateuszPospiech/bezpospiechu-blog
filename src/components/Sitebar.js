@@ -19,7 +19,7 @@ const Sitebar = () => {
                         placeholder="Twój email"
                      />
                   </FormGroup>
-                  <button className="btn btn-outline-success text-uppercase">
+                  <button className="btn btn-outline-warning text-uppercase">
                      Subskrybuj
                   </button>
                </Form>
@@ -30,7 +30,18 @@ const Sitebar = () => {
                <CardTitle className="text-uppercase text-center">
                   Sprawdź nasz sklep!!
                </CardTitle>
-               <img src="../images/justgeek.jpg" alt="JustGeek.pl" srcSet="../images/justgeek.jpg"/>
+               <StaticQuery query={sitebarQuery} render={data => {
+                     return (
+                        <Card>
+                           <CardBody>
+                              <a href="http://justgeek.pl" target="_blank" rel="noopener noreferrer">
+                                 <Img fluid={data.file.childImageSharp.fluid } />
+                              </a>
+                           </CardBody>
+                        </Card>
+                     )
+                  }}
+               />
             </CardBody>
          </Card>
          <Card>
@@ -38,9 +49,7 @@ const Sitebar = () => {
                <CardTitle className="text-center text-uppercase mb-3">
                   Ostatnie posty
                </CardTitle>
-               <StaticQuery 
-               query={sitebarQuery} 
-               render={data => (
+               <StaticQuery query={sitebarQuery} render={data => (
                   <div>
                      {data.allMarkdownRemark.edges.map(({ node }) => (
                         <Card key={node.id}>
@@ -61,7 +70,7 @@ const Sitebar = () => {
                      ))}
                   </div>
                   )}
-                  />
+               />
             </CardBody>
          </Card>
       </div>
@@ -70,6 +79,13 @@ const Sitebar = () => {
 
 const sitebarQuery = graphql`
    query sitebarQuery {
+      file(relativePath: {eq: "justgeek.png"}) {
+         childImageSharp {
+            fluid(maxWidth: 300) {
+               ...GatsbyImageSharpFluid
+            }
+         }
+      }
       allMarkdownRemark(
          sort: { fields: [frontmatter___date], order: DESC}
          limit: 3
@@ -95,5 +111,7 @@ const sitebarQuery = graphql`
       }
    }
 `
+
+
 
 export default Sitebar

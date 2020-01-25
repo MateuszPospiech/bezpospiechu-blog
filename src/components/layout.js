@@ -22,7 +22,7 @@ const Layout = ({ children, pageTitle }) => {
 
   return (
     <>
-    <script src="https://kit.fontawesome.com/889e51bcc7.js" crossOrigin="anonymous"></script>
+    {/* <script src="https://kit.fontawesome.com/889e51bcc7.js" crossOrigin="anonymous"></script> */}
       <Header siteTitle={data.site.siteMetadata.title} />
       <div className="container" id="content" >
         <h1>{pageTitle}</h1>

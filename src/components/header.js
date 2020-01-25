@@ -14,7 +14,7 @@ import {
   NavLink,
 } from 'reactstrap';
 
-  const Header = (props) => {
+  const Header = () => {
     const [isOpen, setIsOpen] = useState(false);
 
     const toggle = () => setIsOpen(!isOpen);
@@ -60,9 +60,9 @@ Header.defaultProps = {
 
 export const query = graphql`
   query {
-    file(relativePath: {eq: "bezPospiechu.png"}) {
+    file(relativePath: {eq: "bezPospiechu_logo.png"}) {
       childImageSharp {
-        fixed(width: 150) {
+        fixed(height: 120) {
           ...GatsbyImageSharpFixed
         }
       }
