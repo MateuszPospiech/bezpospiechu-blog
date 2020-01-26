@@ -1,8 +1,8 @@
 import PropTypes from "prop-types"
 import React, { useState } from 'react';
 import { graphql, StaticQuery } from 'gatsby'
-
 import Img from 'gatsby-image'
+import DarkMode from'./DarkMode'
 
 import {
   Collapse,
@@ -33,14 +33,14 @@ import {
             <NavbarToggler onClick={toggle} />
             <Collapse isOpen={isOpen} navbar>
               <Nav className="ml-auto" navbar>
-                {/* <NavItem>
-                  <NavLink href="/team">Team</NavLink>
-                </NavItem> */}
                 <NavItem>
                   <NavLink href="/tags">Tagi</NavLink>
                 </NavItem>
                 <NavItem>
                   <NavLink href="/about">O mnie</NavLink>
+                </NavItem>
+                <NavItem>
+                  <DarkMode/>
                 </NavItem>
               </Nav>
             </Collapse>

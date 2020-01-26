@@ -7,7 +7,6 @@ import Footer from "./Footer"
 import Sitebar from "./Sitebar"
 import '../styles/index.scss'
 import { Col, Row } from 'reactstrap'
-import { ThemeToggler } from 'gatsby-plugin-dark-mode'
 
 
 const Layout = ({ children, pageTitle }) => {
@@ -27,18 +26,6 @@ const Layout = ({ children, pageTitle }) => {
       <Header siteTitle={data.site.siteMetadata.title} />
       <div className="container" id="content" >
         <h1>{pageTitle}</h1>
-        <ThemeToggler>
-          {({ theme, toggleTheme }) => (
-            <label>
-              <input
-                type="checkbox"
-                onChange={e => toggleTheme(e.target.checked ? 'dark' : 'light')}
-                checked={theme === 'dark'}
-              />{' '}
-              Dark mode
-            </label>
-          )}
-        </ThemeToggler>
         <Row>
           <Col md="8">{children}</Col>
           <Col md="4">
