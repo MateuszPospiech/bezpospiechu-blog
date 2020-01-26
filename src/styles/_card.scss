@@ -10,3 +10,18 @@ ul.post-tags {
     margin-right: 10px;
   }
 }
+
+
+//Dark mode
+.dark{
+  .card {
+    background: #a2a2a2;
+    
+    a {
+      color: $links-color-dark;
+      &:hover {
+        color: $links-color-hover-dark;
+      }
+    }
+  }
+}
