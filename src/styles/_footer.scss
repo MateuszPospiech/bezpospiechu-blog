@@ -48,7 +48,14 @@
     margin-top: 20px;
     padding: 10px;
     text-align: center;
-  
+
+    a {
+      color: $links-color-dark;
+      &:hover {
+        color: $links-color-hover-dark;
+      }
+    }
+
     .footer-social-links {
       text-align: center;
   

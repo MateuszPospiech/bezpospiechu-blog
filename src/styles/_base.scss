@@ -41,12 +41,6 @@ ul {
 body.dark {
   background-color: #3a3a3a;
   color: $light-gray;
-  a {
-    color: $links-color-dark;
-    &:hover {
-      color: $links-color-hover-dark;
-    }
-  }
   h1 {
     color: $light-gray;
   }
@@ -61,6 +55,31 @@ body.dark {
     font-size: $size-font-nav;
     &:hover {
       color: $links-color-hover-dark;
+    }
+  }
+
+  //reactstrap
+  .badge-primary {
+    background-color: $links-color-dark;
+  }
+  //Pagination
+  .page-link {
+    background-color: $dark-gray;
+    color: $links-color-dark;
+    border-color: #000;
+  }
+  .page-item.disabled {
+    .page-link {
+      background-color: $light-gray;
+      color: $links-color-dark;
+      border-color: #000;
+    }
+  }
+  .page-item.active {
+    .page-link {
+      background-color: $links-color-dark;
+      color: white;
+      border-color: #000;
     }
   }
 }
