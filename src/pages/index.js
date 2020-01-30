@@ -7,10 +7,11 @@ import PaginationLinks from '../components/PaginationLinks'
 
 const IndexPage = () => {
   const postPerPage = 2
-  const numberOfPages
+  let numberOfPages
+
   return (
     <Layout pageTitle="Blog BezPospiechu">
-      <SEO title="Home" keywords={['gatsby', 'blog podróżniczy']} />
+      <SEO title="Home" />
         <StaticQuery 
           query={indexQuery} 
           render={data => {

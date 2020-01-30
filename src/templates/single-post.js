@@ -12,7 +12,7 @@ const SinglePost = ({ data, pageContext }) => {
    const baseUrl = 'https://bezpospiechu.com/'
    return (
       <Layout pageTitle={post.title}>
-         <SEO title={post.title}/>
+         <SEO title={post.title} />
          <Card>
             <Img classname="card-image-top" fluid={post.image.childImageSharp.fluid}/>
             <CardBody>
@@ -43,7 +43,7 @@ const SinglePost = ({ data, pageContext }) => {
                   </a>
                </li>
                <li>
-                  <a href={'http://twitter.com/sharer/share?url=' + baseUrl + pageContext.slug + '&text=' + post.title + '&via' + 'twitterHandle'} className="twitter" target="_blank" rel="noopener noreferrer">
+                  <a href={'http://twitter.com/sharer/share?url=' + baseUrl + pageContext.slug + '&text=' + post.title + '&viatwitterHandle'} className="twitter" target="_blank" rel="noopener noreferrer">
                      <i className="fab fa-twitter fa-2x"/>
                   </a>
                </li>

@@ -5,3 +5,17 @@
  */
 
 // You can delete this file if you're not using it
+
+const React = require("react")
+exports.onRenderBody = ({
+  setHeadComponents,
+}) => {
+  setHeadComponents([
+    <script
+      key="1"
+      type="text/javascript"
+      src="https://kit.fontawesome.com/889e51bcc7.js"
+      crossOrigin="anonymous"
+    />,
+  ])
+}

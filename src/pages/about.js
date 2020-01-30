@@ -8,7 +8,7 @@ import SEO from "../components/seo"
 
 const AboutPage = () => (
   <Layout pageTitle="O mnie">
-    <SEO title="About" keywords={[`gatsbyjs`, `mateusz pośpiech`, `blog podróżniczy`, `podróże`, `travels`]} />
+    <SEO title="About"/>
     <Card>
       <CardBody>
           <CardTitle className="text-uppercase text-center md-3">
