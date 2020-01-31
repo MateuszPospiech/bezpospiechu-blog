@@ -1,6 +1,8 @@
-.toggleWrapper {
-  padding-left: 40px;
 
+.toggleWrapper {
+@media(min-width: 576px) {
+  padding-left: 40px;
+}
   input {
     position: absolute;
     left: -99em;

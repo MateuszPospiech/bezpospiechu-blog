@@ -43,10 +43,6 @@ const slugify = function(text) {
   
 
  }
- console.log(slugify('Do you know it rains?'));
- console.log(slugify('víš, že prší?'));
- console.log(slugify('Ști că plouă?'));
- console.log(slugify('ты знаешь, что идет дождь?'));
- console.log(slugify('ἀεὶ Λιβύη φέρει τι καινόν'));
+ console.log(slugify('ŻÓŁĆ. Chrząszcz. Łódź'));
  //Web Design => web-design
  module.exports = { slugify }

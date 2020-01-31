@@ -4,31 +4,37 @@
 body {
   background-color: $light-gray;
   font-family: $site-font;
+  background-image: url("../images/background-image.png");
+  background-attachment: fixed;
 }
 a {
-  color: #0056b3;
+  color: $links-color-light;
+  
   &:hover {
-    color: #007bff;
+    color: $links-color-light--hover;
     text-decoration: none;
   }
 }
-h1 {
-  margin-bottom: 20px;
+.h1 {
+  font-size: $font-size-h1;
+  margin-bottom: 0px;
   text-align: center;
 }
+p {
+  font-weight: $weight-font-text;
+}
 .navbar {
-  background-color: white;
-  // border-right: 1px solid rgba(0, 0, 0, 0.4);
-  // border-left: 1px solid rgba(0, 0, 0, 0.4);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+  background-color: $white;
+  border-bottom: 1px solid $border-navbar-light;
   line-height: 1;
 }
 .navbar-light .navbar-nav .nav-link,
 .navbar-light .navbar-brand {
-  color: #0056b3;
+  color: $links-color-light;
   font-size: $size-font-nav;
+
   &:hover {
-    color: #007bff;
+    color: $links-color-light--hover;
   }
 }
 ul {
@@ -36,25 +42,26 @@ ul {
   padding: 0;
 }
 
-
 //Dark mode
 body.dark {
-  background-color: #3a3a3a;
+  background-color: $dark-gray-bg;
   color: $light-gray;
+
   h1 {
     color: $light-gray;
   }
   .navbar {
     background-color: $dark-gray;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+    border-bottom: 1px solid $border-navbar-dark;
     line-height: 1;
   }
   .navbar-light .navbar-nav .nav-link,
   .navbar-light .navbar-brand {
     color: $links-color-dark;
     font-size: $size-font-nav;
+
     &:hover {
-      color: $links-color-hover-dark;
+      color: $links-color-dark--hover;
     }
   }
 
@@ -66,20 +73,20 @@ body.dark {
   .page-link {
     background-color: $dark-gray;
     color: $links-color-dark;
-    border-color: #000;
+    border-color: $black;
   }
   .page-item.disabled {
     .page-link {
       background-color: $light-gray;
       color: $links-color-dark;
-      border-color: #000;
+      border-color: $black;
     }
   }
   .page-item.active {
     .page-link {
       background-color: $links-color-dark;
-      color: white;
-      border-color: #000;
+      color: $white;
+      border-color: $black;
     }
   }
 }

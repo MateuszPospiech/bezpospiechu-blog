@@ -20,7 +20,7 @@ ul.post-tags {
     a {
       color: $links-color-dark;
       &:hover {
-        color: $links-color-hover-dark;
+        color: $links-color-dark--hover;
       }
     }
   }

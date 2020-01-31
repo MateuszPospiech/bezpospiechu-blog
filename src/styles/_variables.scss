@@ -1,14 +1,28 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500&display=swap&subset=latin-ext');
 @import url('https://fonts.googleapis.com/css?family=Raleway');
 
-$site-font: 'Raleway', sans-serif;
+//Font
+$site-font: 'Montserrat', 'Raleway', sans-serif;
+$size-font-nav: 1.4rem;
+$weight-font-text: 300;
 
-$size-font-nav: 24px;
+//Headers
+$font-size-h1: 1.2rem;
 
+$black: #000;
+$white: #fff;
 $light-gray: rgb(240, 240, 240);
 $dark-gray: rgb(80, 80, 80); //#505050
-$white: white;
+$dark-gray-bg: #3a3a3a;
 
+//border
+$border-navbar-light: rgba($black, .4);
+$border-navbar-dark: rgba($white, .4);
+
+//Light mode
+$links-color-light: #0056b3;
+$links-color-light--hover: lighten($links-color-light, 15%);
 
 //Dark mode
 $links-color-dark: #ee5f00;
-$links-color-hover-dark: #ff6600;
+$links-color-dark--hover: lighten($links-color-dark, 15%);

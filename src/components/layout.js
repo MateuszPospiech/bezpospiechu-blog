@@ -1,12 +1,14 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
+import { Col, Row } from 'reactstrap'
+import { Card, CardBody, CardSubtitle } from 'reactstrap'
 
 import Header from "./header"
 import Footer from "./Footer"
 import Sitebar from "./Sitebar"
+
 import '../styles/index.scss'
-import { Col, Row } from 'reactstrap'
 
 
 const Layout = ({ children, pageTitle }) => {
@@ -24,7 +26,13 @@ const Layout = ({ children, pageTitle }) => {
     <>
       <Header siteTitle={data.site.siteMetadata.title} />
       <div className="container" id="content" >
-        <h1>{pageTitle}</h1>
+        <Card>
+          <CardBody>
+              <CardSubtitle>
+              <h1 className="h1">{pageTitle}</h1>
+              </CardSubtitle> 
+          </CardBody> 
+        </Card>
         <Row>
           <Col md="8">{children}</Col>
           <Col md="4">
