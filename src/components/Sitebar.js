@@ -25,7 +25,7 @@ const Sitebar = () => {
                </Form>
             </CardBody>
          </Card>
-         <Card>
+         {/* <Card>
             <CardBody>
                <CardTitle className="text-uppercase text-center">
                   Sprawdź nasz sklep!!
@@ -43,7 +43,7 @@ const Sitebar = () => {
                   }}
                />
             </CardBody>
-         </Card>
+         </Card> */}
          <Card>
             <CardBody>
                <CardTitle className="text-center text-uppercase mb-3">

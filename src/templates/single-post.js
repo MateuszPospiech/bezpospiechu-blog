@@ -5,11 +5,19 @@ import SEO from '../components/seo'
 import { Badge, Card, CardBody, CardSubtitle } from 'reactstrap'
 import Img from 'gatsby-image'
 import { slugify } from '../util/utilityFunctions'
+import { DiscussionEmbed } from 'disqus-react'
 
 const SinglePost = ({ data, pageContext }) => {
    const post = data.markdownRemark.frontmatter
 
-   const baseUrl = 'https://bezpospiechu.com/'
+   const baseUrl = 'http://bezpospiechu.com/'
+   const disqusShortname = 'bezpospiechu-com'
+   const disqusConfig = { 
+      identifier: data.markdownRemark.id,
+      title: post.title,
+      url: baseUrl + pageContext.slug
+   }
+
    return (
       <Layout pageTitle={post.title}>
          <SEO title={post.title} />
@@ -30,35 +38,41 @@ const SinglePost = ({ data, pageContext }) => {
                      </li>
                   ))}
                </ul>
+               {/* Share section */}
+               <h3 className="text-center">
+                  Podziel się na
+               </h3>
+               <div className="text-center social-share-links">
+                  <ul>
+                     <li>
+                        <a href={'http://facebook.com/sharer/sharer.php?u=' + baseUrl + pageContext.slug} className="facebook" target="_blank" rel="noopener noreferrer">
+                           <i className="fab fa-facebook-f fa-2x"/>
+                        </a>
+                     </li>
+                     <li>
+                        <a href={'http://twitter.com/sharer/share?url=' + baseUrl + pageContext.slug + '&text=' + post.title + '&viatwitterHandle'} className="twitter" target="_blank" rel="noopener noreferrer">
+                           <i className="fab fa-twitter fa-2x"/>
+                        </a>
+                     </li>
+                     <li>
+                        <a href={'http://plus.google.com/sharer/share?url=' + baseUrl + pageContext.slug} className="google" target="_blank" rel="noopener noreferrer">
+                           <i className="fab fa-google fa-2x"/>
+                        </a>
+                     </li>
+                     <li>
+                        <a href={'http://linkedin.com/shareArticle?url=' + baseUrl + pageContext.slug} className="linkedin" target="_blank" rel="noopener noreferrer">
+                           <i className="fab fa-linkedin fa-2x"/>
+                        </a>
+                     </li>
+                  </ul>
+               </div>
             </CardBody>
          </Card>
-         <h3 className="text-center">
-            Podziel się na
-         </h3>
-         <div className="text-center social-share-links">
-            <ul>
-               <li>
-                  <a href={'http://facebook.com/sharer/sharer.php?u=' + baseUrl + pageContext.slug} className="facebook" target="_blank" rel="noopener noreferrer">
-                     <i className="fab fa-facebook-f fa-2x"/>
-                  </a>
-               </li>
-               <li>
-                  <a href={'http://twitter.com/sharer/share?url=' + baseUrl + pageContext.slug + '&text=' + post.title + '&viatwitterHandle'} className="twitter" target="_blank" rel="noopener noreferrer">
-                     <i className="fab fa-twitter fa-2x"/>
-                  </a>
-               </li>
-               <li>
-                  <a href={'http://plus.google.com/sharer/share?url=' + baseUrl + pageContext.slug} className="google" target="_blank" rel="noopener noreferrer">
-                     <i className="fab fa-google fa-2x"/>
-                  </a>
-               </li>
-               <li>
-                  <a href={'http://linkedin.com/shareArticle?url=' + baseUrl + pageContext.slug} className="linkedin" target="_blank" rel="noopener noreferrer">
-                     <i className="fab fa-linkedin fa-2x"/>
-                  </a>
-               </li>
-            </ul>
-         </div>
+         <Card>
+            <CardBody>
+               <DiscussionEmbed shortname={disqusShortname} config={disqusConfig} />
+            </CardBody>
+         </Card>
       </Layout>
    )
 }
