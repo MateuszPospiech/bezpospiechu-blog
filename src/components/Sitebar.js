@@ -1,7 +1,8 @@
 import React from 'react'
-import { Card, CardTitle, CardBody, Form, FormGroup, Input } from 'reactstrap'
+import { Card, CardTitle, CardBody } from 'reactstrap'
 import { graphql, StaticQuery, Link } from 'gatsby'
 import Img from 'gatsby-image'
+import Newsletter from './Newsletter'
 
 const Sitebar = () => {
    return(
@@ -11,18 +12,7 @@ const Sitebar = () => {
                <CardTitle className="text-uppercase text-center md-3">
                   Newsletter
                </CardTitle>
-               <Form className="text-center">
-                  <FormGroup>
-                     <Input
-                        type="email"
-                        name="email"
-                        placeholder="Twój email"
-                     />
-                  </FormGroup>
-                  <button className="btn btn-outline-warning text-uppercase">
-                     Subskrybuj
-                  </button>
-               </Form>
+                  <Newsletter/>
             </CardBody>
          </Card>
          {/* <Card>

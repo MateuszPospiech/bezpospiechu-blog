@@ -23,6 +23,12 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    {
+      resolve: 'gatsby-plugin-mailchimp',
+      options: {
+          endpoint: 'https://bezpospiechu.us4.list-manage.com/subscribe/post?u=86e2ca4f906e8eb5fbd9acaad&amp;id=e54338eadc',
+      },
+    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-dark-mode`,
