@@ -1,6 +1,6 @@
 import React from 'react';
 import addToMailchimp from 'gatsby-plugin-mailchimp';
-import { Button, Form, FormGroup, Input } from 'reactstrap';
+import { Form, FormGroup, Input } from 'reactstrap';
 
 export default class Newsletter extends React.Component {
     state = {
@@ -40,17 +40,6 @@ export default class Newsletter extends React.Component {
     render() {
         return (
             <>
-                {/* <Form className="text-center" onSubmit={this._handleSubmit}>
-                    <input
-                        type="email"
-                        onChange={this._handleChange}
-                        placeholder="Email"
-                        name="email"
-                        className=""
-                    />
-                    <br/>
-                    <input type="submit" />
-                </Form> */}
                 <Form className="text-center" onSubmit={this._handleSubmit}>
                     <FormGroup>
                         <Input 
@@ -61,7 +50,7 @@ export default class Newsletter extends React.Component {
                             className=""
                          />
                     </FormGroup>
-                    <Button className="btn btn-primary" type="submit">Zapisz się</Button>
+                    <button className="btn btn-primary" type="submit">Zapisz się</button>
                 </Form>
             </>
         );
