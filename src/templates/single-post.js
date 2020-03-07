@@ -29,6 +29,15 @@ const SinglePost = ({ data, pageContext }) => {
                   <span className="text-info">{post.author}</span>
                </CardSubtitle>
                <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
+
+               {/* Temp Galerry */}
+                  {post.galeryImages.map(galeryImage => (
+                     <Link to={galeryImage.childImageSharp.fluid.src}>
+                        <Img fluid={galeryImage.childImageSharp.fluid}/>
+                     </Link>
+                  ))}
+               {/* End Temp Galerry */}
+
                <ul className="post-tags">
                   {post.tags.map(tag => (
                      <li key={tag}>
@@ -87,6 +96,13 @@ export const postQuery = graphql`
             author
             date(formatString: "DD-MM-YYYY")
             tags
+            galeryImages {
+               childImageSharp {
+                  fluid(maxWidth: 900) {
+                     ...GatsbyImageSharpFluid
+                  }
+               }
+            }
             image {
                childImageSharp {
                   fluid(maxWidth: 900) {
