@@ -22,7 +22,7 @@ import {
       <div>
         <Navbar fixed="top" light expand="sm">
           <div className="container">
-            <NavbarBrand href="/">
+            <NavbarBrand href="/" title="BezPospiechu homepage">
             <StaticQuery query={query} render={data => {
                 return (
                   <Img fixed={data.file.childImageSharp.fixed } />
@@ -34,10 +34,10 @@ import {
             <Collapse isOpen={isOpen} navbar>
               <Nav className="ml-auto" navbar>
                 <NavItem>
-                  <NavLink href="/tags">Tagi</NavLink>
+                  <NavLink href="/tags" title="BezPospiechu tagi">Tagi</NavLink>
                 </NavItem>
                 <NavItem>
-                  <NavLink href="/about">O mnie</NavLink>
+                  <NavLink href="/about" title="BezPospiechu o mnie">O mnie</NavLink>
                 </NavItem>
                 <NavItem>
                   <DarkMode/>

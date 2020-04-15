@@ -10,23 +10,23 @@ const PaginationLinks = ({ currentPage, numberOfPages }) => {
       <Pagination aria-label="Page navigation example">
          {isFirst ? (
             <PaginationItem disabled>
-               <PaginationLink previous href="/" />
+               <PaginationLink previous href="/" title="BezPospiechu homepage" />
             </PaginationItem>
          ) : (
             <PaginationItem>
-               <PaginationLink previous href={previousPage} />
+               <PaginationLink previous href={previousPage} title="BezPospiechu poprzednia strona"/>
             </PaginationItem>
          )}
          {Array.from({ length: numberOfPages }, (_, i) => 
          currentPage === i + 1 ? (
             <PaginationItem active key={`page-number${i + 1}`}>
-               <PaginationLink href={`/${i === 0 ? '' : 'strona/' + (i + 1)}`}>
+               <PaginationLink href={`/${i === 0 ? '' : 'strona/' + (i + 1)}`} title={`BezPospiechu paginacja /${i === 0 ? '' : 'strona/' + (i + 1)}`}>
                   {i + 1}
                </PaginationLink>
             </PaginationItem>
             ) : (
             <PaginationItem key={`page-number${i + 1}`}>
-               <PaginationLink href={`/${i === 0 ? '' : 'strona/' + (i + 1)}`}>
+               <PaginationLink href={`/${i === 0 ? '' : 'strona/' + (i + 1)}`} title={`BezPospiechu paginacja /${i === 0 ? '' : 'strona/' + (i + 1)}`}>
                   {i + 1}
                </PaginationLink>
             </PaginationItem>
@@ -34,11 +34,11 @@ const PaginationLinks = ({ currentPage, numberOfPages }) => {
          )}
          {isLast ? (
             <PaginationItem disabled>
-               <PaginationLink next href={nextPage}/>
+               <PaginationLink next href={nextPage} title="BezPospiechu paginacja następna strona"/>
             </PaginationItem>
          ) : (
             <PaginationItem>
-               <PaginationLink next href={nextPage}/>
+               <PaginationLink next href={nextPage} title={`BezPospiechu paginacja następna strona`}/>
             </PaginationItem>
          )}
       </Pagination>

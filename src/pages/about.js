@@ -8,7 +8,7 @@ import SEO from "../components/seo"
 
 const AboutPage = () => (
   <Layout pageTitle="O mnie">
-    <SEO title="About"/>
+    <SEO title="O mnie"/>
     <Card>
       <CardBody>
           <CardTitle className="text-uppercase text-center md-3">
