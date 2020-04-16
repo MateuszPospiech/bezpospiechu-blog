@@ -29,11 +29,11 @@ export default class Newsletter extends React.Component {
                 if (result !== 'success') {
                     throw msg;
                 }
-                alert(msg);
+                alert("Dziękujemy za zapisanie się do newslettera. Sprawdź email w celu potwierdzenia rejestracji.");
             })
             .catch((err) => {
                 console.log('err', err);
-                alert(err);
+                alert("Sprawdź poprawność wpisanego maila");
             });
     }
 
