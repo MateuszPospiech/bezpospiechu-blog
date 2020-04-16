@@ -7,12 +7,12 @@ import { slugify } from '../util/utilityFunctions'
 const Post = ({ title, author, slug, date, body, fluid, tags }) =>{
    return(
       <Card>
-         <Link to={slug}>
-            <Img className="card-image-top" fluid={fluid} />
+         <Link to={slug} title={title}>
+            <Img className="card-image-top" fluid={fluid} alt="BezPospiechu post hero" title="BezPospiechu post hero"/>
          </Link>
          <CardBody>
             <CardTitle>
-               <Link to={slug}>
+               <Link to={slug} title={title}>
                <h2>{title}</h2>
                </Link>
             </CardTitle>
@@ -25,7 +25,7 @@ const Post = ({ title, author, slug, date, body, fluid, tags }) =>{
                {tags.map(tag => {
                   return(
                      <li key={tag}>
-                        <Link to={`/tag/${slugify(tag)}`}>
+                        <Link to={`/tag/${slugify(tag)}`} title={`BezPospiechu tag: ${slugify(tag)}`}>
                            <Badge color="primary" className="text-uppercase">{tag}</Badge>
                         </Link>
                      </li>
@@ -33,7 +33,7 @@ const Post = ({ title, author, slug, date, body, fluid, tags }) =>{
                   )
                }  
             </ul>
-            <Link to={slug} className="btn btn-outline-primary float-right">Czytaj więcej</Link>
+            <Link to={slug} className="btn btn-outline-primary float-right" title="BezPospiechu czytaj więcej" >Czytaj więcej</Link>
          </CardBody>
       </Card>
    )

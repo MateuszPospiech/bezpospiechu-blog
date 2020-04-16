@@ -3,7 +3,6 @@ import { ThemeToggler } from 'gatsby-plugin-dark-mode'
 
 const DarkMode = () =>{
    return(
-      <label>
       <ThemeToggler>
          {({ theme, toggleTheme }) => (
             <div className="toggleWrapper">
@@ -30,7 +29,6 @@ const DarkMode = () =>{
             </div>
          )}
       </ThemeToggler>
-      </label>
    )
 }
 

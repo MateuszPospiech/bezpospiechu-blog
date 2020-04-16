@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `BezPospiechu Blog`,
+    title: `BezPospiechu blog podróżniczy z opisem wydatków, miejsc i atrakcji.`,
     description: `Jeżeli chcesz zobaczyć moje podróże wraz z kosztorysem to serdecznie zapraszam. `,
     author: `@gatsbyjs`,
   },

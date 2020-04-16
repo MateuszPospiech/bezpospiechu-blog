@@ -22,7 +22,7 @@ const SinglePost = ({ data, pageContext }) => {
       <Layout pageTitle={post.title}>
          <SEO title={post.title} />
          <Card>
-            <Img classname="card-image-top" fluid={post.image.childImageSharp.fluid}/>
+            <Img classname="card-image-top" fluid={post.image.childImageSharp.fluid} alt="BezPospiechu" title="BezPospiechu" />
             <CardBody>
                <CardSubtitle>
                   <span className="text-info">{post.date}</span> autor{` `}
@@ -34,7 +34,7 @@ const SinglePost = ({ data, pageContext }) => {
                <div className="row single_post_gallery">
                   {post.galeryImages.map(galeryImage => (
                      <div className="col-12 single_post_gallery--item">
-                        <Img fluid={galeryImage.childImageSharp.fluid}/>
+                        <Img fluid={galeryImage.childImageSharp.fluid} alt="BezPospiechu galeria" title="Bez Pospiechu galeria"/>
                      </div>
                   ))}
                </div>
@@ -43,7 +43,7 @@ const SinglePost = ({ data, pageContext }) => {
                <ul className="post-tags">
                   {post.tags.map(tag => (
                      <li key={tag}>
-                        <Link to={`/tag/${slugify(tag)}`}>
+                        <Link to={`/tag/${slugify(tag)}`} title={`BezPospiechu tag: ${slugify(tag)}`}>
                            <Badge color="primary">{tag}</Badge>
                         </Link>
                      </li>

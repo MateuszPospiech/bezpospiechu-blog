@@ -43,15 +43,17 @@ const Sitebar = () => {
                   <div>
                      {data.allMarkdownRemark.edges.map(({ node }) => (
                         <Card key={node.id}>
-                           <Link to={node.fields.slug}>
+                           <Link to={node.fields.slug} title={node.frontmatter.title} >
                               <Img 
+                                 alt={node.frontmatter.title}
                                  className="card-image-top" 
                                  fluid={node.frontmatter.image.childImageSharp.fluid}
+                                 title={node.frontmatter.title}
                               />
                            </Link>
                            <CardBody>
                               <CardTitle>
-                                 <Link to={node.fields.slug}>
+                                 <Link to={node.fields.slug} title={node.frontmatter.title} >
                                     {node.frontmatter.title}
                                  </Link>
                               </CardTitle>

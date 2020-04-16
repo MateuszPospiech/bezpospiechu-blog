@@ -18,7 +18,7 @@ const AboutPage = () => (
                 return (
                   <Card>
                     <CardBody>
-                      <Img fluid={data.file.childImageSharp.fluid } />
+                      <Img fluid={data.file.childImageSharp.fluid } alt="Mateusz Pośpiech" title="Mateusz Pośpiech" />
                     </CardBody>
                   </Card>
                 )

@@ -2,20 +2,20 @@ import React from 'react';
 
 const Footer = () => (
    <div className="site-footer">
-      <h4 className="text-center">
+      <div className="text-center">
           © {new Date().getFullYear()}, Created by
           {` `}
-          <a href="http://www.mateuszpospiech.pl" target="_blank" title="Mateusz Pośpiech portfolio" rel="noopener noreferrer">Pospiech.IT</a>
-      </h4>
+          <a href="https://mateuszpospiech.pl" target="_blank" title="Mateusz Pośpiech portfolio" rel="noopener noreferrer">Pospiech.IT</a>
+      </div>
       <div className="footer-social-links">
          <ul className="social-links-list">
             <li>
-               <a href="http://www.facebook.com/bezpospiechu-blog" className="facebook" target="_blank" title="BezPospiechu facebook fanpage" rel="noopener noreferrer">
+               <a href="https://www.facebook.com/bezpospiechu-blog" className="facebook" target="_blank" title="BezPospiechu facebook fanpage" rel="noopener noreferrer">
                <i className="fab fa-facebook-f"></i>
                </a>
             </li>
             <li>
-               <a href="http://www.instagram.com/zamalamasa/" className="instagram" target="_blank" title="Mateusz Pośpiech instagram zamalamasa" rel="noopener noreferrer">
+               <a href="https://www.instagram.com/zamalamasa/" className="instagram" target="_blank" title="Mateusz Pośpiech instagram zamalamasa" rel="noopener noreferrer">
                <i className="fab fa-instagram"></i>
                </a>
             </li>

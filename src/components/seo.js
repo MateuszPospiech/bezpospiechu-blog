@@ -75,7 +75,7 @@ function SEO({ description, lang, meta, title }) {
 SEO.defaultProps = {
   lang: `pl`,
   meta: ['Podróże', 'finanse', 'ekonomia', 'sport'],
-  description: `Bez Pośpiechu blog. Podróże, finanse, ekonomia, sport.`,
+  description: `BezPospiechu blog to budżetowe jak i te troszke droższe podróże wraz z opisem wydatków, miejsc, atrakcji. Subiektywna ocena miejsc świata wraz z wydatkami.`,
 }
 
 SEO.propTypes = {

@@ -25,7 +25,7 @@ import {
             <NavbarBrand href="/" title="BezPospiechu homepage">
             <StaticQuery query={query} render={data => {
                 return (
-                  <Img fixed={data.file.childImageSharp.fixed } />
+                  <Img fixed={data.file.childImageSharp.fixed } alt="BezPospiechu logo" title="BezPospiechu logo" />
                 )
               }}
             />
@@ -34,10 +34,10 @@ import {
             <Collapse isOpen={isOpen} navbar>
               <Nav className="ml-auto" navbar>
                 <NavItem>
-                  <NavLink href="/tags" title="BezPospiechu tagi">Tagi</NavLink>
+                  <NavLink href="/tagi" title="BezPospiechu tagi">Tagi</NavLink>
                 </NavItem>
                 <NavItem>
-                  <NavLink href="/about" title="BezPospiechu o mnie">O mnie</NavLink>
+                  <NavLink href="/o-mnie" title="BezPospiechu o mnie">O mnie</NavLink>
                 </NavItem>
                 <NavItem>
                   <DarkMode/>
