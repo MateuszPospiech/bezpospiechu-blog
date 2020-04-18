@@ -33,7 +33,7 @@ export default class Newsletter extends React.Component {
             })
             .catch((err) => {
                 console.log('err', err);
-                alert("Sprawdź poprawność wpisanego maila");
+                alert("Sprawdź poprawność wpisanego maila. Być może już jesteś zapisany na mój newsletter - sprawdź email.");
             });
     }
 
@@ -47,7 +47,8 @@ export default class Newsletter extends React.Component {
                             onChange={this._handleChange}
                             placeholder="Email"
                             name="email"
-                            className=""
+                            pattern="[a-zA-Z0-9.-_]{1,}@[a-zA-Z.-]{2,}[.]{1}[a-zA-Z]{2,}"
+                            required
                          />
                     </FormGroup>
                     <button className="btn btn-primary" type="submit">Zapisz się</button>

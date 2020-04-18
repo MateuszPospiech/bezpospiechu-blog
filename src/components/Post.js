@@ -17,7 +17,7 @@ const Post = ({ title, author, slug, date, body, fluid, tags }) =>{
                </Link>
             </CardTitle>
             <CardSubtitle>
-               <span className="text-info">{date}</span> autor{` `}
+               <time className="text-info">{date}</time> autor{` `}
                <span className="text-info"> {author}</span>
             </CardSubtitle>
             <CardText>{body}</CardText>

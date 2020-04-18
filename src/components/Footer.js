@@ -1,13 +1,13 @@
 import React from 'react';
 
 const Footer = () => (
-   <div className="site-footer">
-      <div className="text-center">
+   <footer className="site-footer">
+      <section className="text-center">
           © {new Date().getFullYear()}, Created by
           {` `}
           <a href="https://mateuszpospiech.pl" target="_blank" title="Mateusz Pośpiech portfolio" rel="noopener noreferrer">Pospiech.IT</a>
-      </div>
-      <div className="footer-social-links">
+      </section>
+      <section className="footer-social-links">
          <ul className="social-links-list">
             <li>
                <a href="https://www.facebook.com/bezpospiechublog" className="facebook" target="_blank" title="BezPospiechu facebook fanpage" rel="noopener noreferrer">
@@ -30,8 +30,8 @@ const Footer = () => (
                </a>
             </li>
          </ul>
-      </div>
-   </div>
+      </section>
+   </footer>
 )
 
 export default Footer 

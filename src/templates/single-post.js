@@ -25,7 +25,7 @@ const SinglePost = ({ data, pageContext }) => {
             <Img classname="card-image-top" fluid={post.image.childImageSharp.fluid} alt="BezPospiechu" title="BezPospiechu" />
             <CardBody>
                <CardTitle>
-                  <span className="text-info">{post.date}</span> autor{` `}
+                  <time className="text-info">{post.date}</time> autor{` `}
                   <span className="text-info">{post.author}</span>
                </CardTitle>
                <CardTitle>
