@@ -19,7 +19,7 @@ import {
 
     const toggle = () => setIsOpen(!isOpen);
     return (
-      <div>
+      <header>
         <Navbar fixed="top" light expand="sm">
           <div className="container">
             <NavbarBrand href="/" title="BezPospiechu homepage">
@@ -46,7 +46,7 @@ import {
             </Collapse>
           </div>
         </Navbar>
-      </div>
+      </header>
     );
   }
 

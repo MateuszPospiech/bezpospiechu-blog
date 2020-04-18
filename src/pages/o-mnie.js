@@ -12,7 +12,7 @@ const AboutPage = () => (
     <Card>
       <CardBody>
           <CardTitle className="text-uppercase text-center md-3">
-            <h2 className="h3">Cześć, nazwam się <br></br><strong>Mateusz Pośpiech</strong></h2>
+            <h2 className="h3">Cześć, nazywam się <br></br><strong>Mateusz Pośpiech</strong></h2>
           </CardTitle>
           <StaticQuery query={aboutQuery} render={data => {
                 return (

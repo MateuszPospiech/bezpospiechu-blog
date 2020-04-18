@@ -54,6 +54,10 @@ ul {
   color: $links-color-light;
   border-color: $links-color-light;
 }
+.btn-outline-primary {
+  color: $links-color-light--hover;
+  border-color: $links-color-light--hover;
+}
 .text-info {
   color: $links-color-light !important;
 }
@@ -112,6 +116,10 @@ body.dark {
   .btn-outline-primary {
     color: $links-color-dark;
     border-color: $links-color-dark;
+  }
+  .btn-outline-primary:hover {
+    color: $links-color-dark--hover;
+    border-color: $links-color-dark--hover;
   }
   .text-info {
     color: $links-color-dark !important;

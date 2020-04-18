@@ -47,7 +47,7 @@ export default class Newsletter extends React.Component {
                             onChange={this._handleChange}
                             placeholder="Email"
                             name="email"
-                            pattern="[a-zA-Z0-9.-_]{1,}@[a-zA-Z.-]{2,}[.]{1}[a-zA-Z]{2,}"
+                            pattern="[a-zA-Z0-9.-_]{1,}@[a-zA-Z0-9.-]{2,}[.]{1}[a-zA-Z]{2,}"
                             required
                          />
                     </FormGroup>
