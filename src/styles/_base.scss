@@ -40,6 +40,14 @@ p {
   border-bottom: 1px solid $border-navbar-light;
   line-height: 1;
 }
+.navbar-light .navbar-nav .nav-item {
+  margin: 8px 0;
+}
+@media(min-width: 576px) {
+  .navbar-light .navbar-nav .nav-item {
+    margin: 0;
+  }
+}
 .navbar-light .navbar-nav .nav-link,
 .navbar-light .navbar-brand {
   color: $links-color-light;
@@ -56,6 +64,12 @@ ul {
 //reactstrap
 .badge-primary {
   background-color: $links-color-light;
+
+  &:active {
+    color: $black !important;
+    border-color: $links-color-light--hover !important;
+    background-color: $links-color-light--hover !important;
+  }
 }
 .btn-primary {
   background-color: $links-color-light;
@@ -64,10 +78,12 @@ ul {
 .btn-outline-primary {
   color: $links-color-light;
   border-color: $links-color-light;
-}
-.btn-outline-primary {
-  color: $links-color-light--hover;
-  border-color: $links-color-light--hover;
+
+  &:hover {
+    color: $white;
+    border-color: $links-color-light;
+    background-color: $links-color-light;
+  }
 }
 .text-info {
   color: $links-color-light !important;
@@ -123,14 +139,23 @@ body.dark {
   .btn-primary {
     background-color: $links-color-dark;
     border-color: $links-color-dark;
+
+    &:active {
+      color: $white !important;
+      border-color: $links-color-dark--hover !important;
+      background-color: $links-color-dark--hover !important;
+    }
   }
   .btn-outline-primary {
     color: $links-color-dark;
     border-color: $links-color-dark;
-  }
-  .btn-outline-primary:hover {
-    color: $links-color-dark--hover;
-    border-color: $links-color-dark--hover;
+
+    &:hover,
+    &:active {
+      color: $white !important;
+      border-color: $links-color-dark !important;
+      background-color: $links-color-dark !important;
+    }
   }
   .text-info {
     color: $links-color-dark !important;
