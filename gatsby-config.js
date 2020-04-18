@@ -29,6 +29,13 @@ module.exports = {
           endpoint: 'https://bezpospiechu.us4.list-manage.com/subscribe/post?u=86e2ca4f906e8eb5fbd9acaad&amp;id=e54338eadc',
       },
     },
+    {
+      resolve: "gatsby-plugin-google-tagmanager",
+      options: {
+        id: "GTM-5NZ3G43",
+        includeInDevelopment: false,
+      },
+    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-dark-mode`,
