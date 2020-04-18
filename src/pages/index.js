@@ -11,7 +11,7 @@ const IndexPage = () => {
 
   return (
     <Layout pageTitle="Blog BezPospiechu">
-      <SEO title="Home" />
+      <SEO title="BezPospiechu" />
         <StaticQuery 
           query={indexQuery} 
           render={data => {

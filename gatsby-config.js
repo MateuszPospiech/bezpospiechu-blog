@@ -36,6 +36,12 @@ module.exports = {
         includeInDevelopment: false,
       },
     },
+    {
+      resolve: 'gatsby-plugin-htaccess',
+      options: {
+        https: true,
+      },
+    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-dark-mode`,
