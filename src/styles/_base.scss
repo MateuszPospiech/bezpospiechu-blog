@@ -1,5 +1,16 @@
+html {
+  font-size: 14px;
+}
 .container#content {
-  margin-top: 160px;
+  margin-top: 100px;
+}
+@media only screen and (min-width: 768px) {
+  .container#content {
+    margin-top: 160px;
+  }
+  html {
+    font-size: 16px;
+  }
 }
 body {
   background-color: $light-gray;

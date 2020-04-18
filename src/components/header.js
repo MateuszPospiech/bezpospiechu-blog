@@ -23,9 +23,15 @@ import {
         <Navbar fixed="top" light expand="sm">
           <div className="container">
             <NavbarBrand href="/" title="BezPospiechu homepage">
-            <StaticQuery query={query} render={data => {
+            {/* <StaticQuery query={query} render={data => {
                 return (
                   <Img fixed={data.file.childImageSharp.fixed } alt="BezPospiechu logo" title="BezPospiechu logo" />
+                )
+              }}
+            /> */}
+            <StaticQuery query={query} render={data => {
+                return (
+                  <Img className="logo" fluid={data.file.childImageSharp.fluid } alt="BezPospiechu logo" title="BezPospiechu logo" />
                 )
               }}
             />
@@ -64,6 +70,9 @@ export const query = graphql`
       childImageSharp {
         fixed(height: 120) {
           ...GatsbyImageSharpFixed
+        }
+        fluid(maxHeight: 120) {
+          ...GatsbyImageSharpFluid
         }
       }
     }
