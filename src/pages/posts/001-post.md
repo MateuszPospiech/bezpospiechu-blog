@@ -1,5 +1,6 @@
 ---
-title: 'Hiszpania, Lanzarotte - Kwiecień 2017'
+title: 'Lanzarotte, Hiszpania - Kwiecień 2017'
+subtitle: 'Cześć! Dziś kilka słów oraz zdjęć z wyjazdu na Lanzarote, które odwiedziłem w kwietniu 2017 roku.'
 date: 2020-01-05
 author: 'Mateusz Pośpiech'
 image: '../../images/pole-winogron.jpg'
@@ -15,8 +16,6 @@ tags:
 - hiszpania
 - lanzarote
 ---
-
-Cześć! Dziś kilka słów oraz zdjęć z wyjazdu na Lanzarote, które odwiedziłem w kwietniu 2017 roku.
 
 Lanzarote to wulkaniczna wyspa znajdująca się na Oceanie Atlantyckim, należąca do Hiszpanii i będąca częścią archipelagu Wysp Kanaryjskich. Jest położona ok 125 km od wybrzeża Afryki. Jej atrakcje oraz obecny wygląd wyspa zawdzięcza Césarowi Manrique. Prócz swojego domu w którym aktualnie jest fundacja jego imienia, stworzył między innymi symbol Parku Narodowego Timanfaya - El Diablo, ogród kaktusów, Jameos del Agua - salę koncertową wewnątrz groty wulkanicznej i wiele innych. Na Wyspe znajduje się również zoo z masą atrakcji. Największe wrażenie wywarły na mnie ogromne ptaki, których rozpiętość skrzydeł przekracza 4m oraz papuga potrafiąca dodawać liczby pokazywane jej na palcach(wynik wybijała na dzwonku). Temperatura cały rok utrzymuje się w okolicach 20-28 stopni, a opady nie występują za często... Podobno w naszą Polską zimę wyspa robi się najbardziej zielona. Nie mniej jednak trzeba mieć na uwadze, że większość terenu przykrywa wulkaniczny pył, więc nie ma co liczyć na zielone łąki. Po wielu latach prób i badań przez lokalną ludność jak tu wyhodować cokolwiek w takim klimacie na wyspie, która praktycznie nie posiada żyznej gleby udało się zaobserwować ciekawą rzecz. Ciekawostką są drzewa winogron, które rosną właśnie w popiele wulkanicznym! W tym pyle kopane są takie 2-3m doły, do których sadzone są drzewa winogron, następnie są przysypywane do poziomu liści oraz lekko osłonięte kamieniami przed wiatrem z jednej strony. Za dnia słońce nasłonecznienie liście, jednocześnie nagrzewając bardzo mocno czarne podłoże. Gdy słońce zachodzi, nagrzane kamienie zaczynają oddawać ciepło, a na kamieniach pojawiają się kropelki wody, dzięki czemu drzewa mogą rosnąć i dawać owoce winogron.
 

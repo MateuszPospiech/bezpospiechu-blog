@@ -14,6 +14,7 @@ const tagPosts = ({ data, pageContext }) => {
             <Post key={node.id}
                slug={node.fields.slug}
                title={node.frontmatter.title}
+               author={node.frontmatter.author}
                date={node.frontmatter.date}
                body={node.excerpt}
                tags={node.frontmatter.tags}
@@ -36,7 +37,8 @@ export const tagQuery = graphql`
                id
                frontmatter{
                   title
-                  date(formatString: "MMM Do YYYY")
+                  author
+                  date(formatString: "DD-MM-YYYY")
                   tags
                   image{
                      childImageSharp{

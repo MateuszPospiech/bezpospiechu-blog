@@ -10,7 +10,7 @@ const Footer = () => (
       <div className="footer-social-links">
          <ul className="social-links-list">
             <li>
-               <a href="https://www.facebook.com/bezpospiechu-blog" className="facebook" target="_blank" title="BezPospiechu facebook fanpage" rel="noopener noreferrer">
+               <a href="https://www.facebook.com/bezpospiechublog" className="facebook" target="_blank" title="BezPospiechu facebook fanpage" rel="noopener noreferrer">
                <i className="fab fa-facebook-f"></i>
                </a>
             </li>

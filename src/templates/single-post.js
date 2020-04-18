@@ -2,7 +2,7 @@ import React from 'react'
 import Layout from '../components/layout'
 import { graphql, Link } from 'gatsby'
 import SEO from '../components/seo'
-import { Badge, Card, CardBody, CardSubtitle } from 'reactstrap'
+import { Badge, Card, CardBody, CardSubtitle, CardTitle } from 'reactstrap'
 import Img from 'gatsby-image'
 import { slugify } from '../util/utilityFunctions'
 import { DiscussionEmbed } from 'disqus-react'
@@ -24,11 +24,14 @@ const SinglePost = ({ data, pageContext }) => {
          <Card>
             <Img classname="card-image-top" fluid={post.image.childImageSharp.fluid} alt="BezPospiechu" title="BezPospiechu" />
             <CardBody>
-               <CardSubtitle>
+               <CardTitle>
                   <span className="text-info">{post.date}</span> autor{` `}
                   <span className="text-info">{post.author}</span>
-               </CardSubtitle>
-               <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
+               </CardTitle>
+               <CardTitle>
+                  <h2 className="h4">{post.subtitle}</h2>
+               </CardTitle>
+               <article dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
 
                {/* Temp Galerry */}
                <div className="row single_post_gallery">
@@ -95,6 +98,7 @@ export const postQuery = graphql`
          html
          frontmatter {
             title
+            subtitle
             author
             date(formatString: "DD-MM-YYYY")
             tags
