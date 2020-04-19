@@ -3,6 +3,7 @@ import { Card, CardTitle, CardBody } from 'reactstrap'
 import { graphql, StaticQuery, Link } from 'gatsby'
 import Img from 'gatsby-image'
 import Newsletter from './Newsletter'
+import SocialMedia from './SocialMedia'
 
 const Sitebar = () => {
    return(
@@ -13,6 +14,14 @@ const Sitebar = () => {
                   Newsletter
                </CardTitle>
                   <Newsletter/>
+            </CardBody>
+         </Card>
+         <Card>
+            <CardBody>
+               <CardTitle className="text-uppercase text-center md-3">
+                  Sprawdź również
+               </CardTitle>
+                  <SocialMedia/>
             </CardBody>
          </Card>
          {/* <Card>

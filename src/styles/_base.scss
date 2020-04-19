@@ -44,8 +44,12 @@ p {
   margin: 8px 0;
 }
 @media(min-width: 576px) {
-  .navbar-light .navbar-nav .nav-item {
-    margin: 0;
+  .navbar-light .navbar-nav {
+    align-items: center;
+
+    .nav-item {
+      margin: 0;
+    }
   }
 }
 .navbar-light .navbar-nav .nav-link,

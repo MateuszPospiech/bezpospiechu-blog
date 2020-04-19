@@ -40,11 +40,17 @@ import {
             <Collapse isOpen={isOpen} navbar>
               <Nav className="ml-auto" navbar>
                 <NavItem>
-                  <NavLink href="/tagi" title="BezPospiechu tagi">Tagi</NavLink>
+                  <NavLink href="/" title="BezPospiechu strona główna">Strona główna</NavLink>
                 </NavItem>
+
                 <NavItem>
                   <NavLink href="/o-mnie" title="BezPospiechu o mnie">O mnie</NavLink>
                 </NavItem>
+
+                <NavItem>
+                  <NavLink href="/tagi" title="BezPospiechu tagi">Tagi</NavLink>
+                </NavItem>
+                
                 <NavItem>
                   <DarkMode/>
                 </NavItem>
