@@ -74,10 +74,10 @@ export const query = graphql`
   query {
     file(relativePath: {eq: "bezPospiechu_logo.png"}) {
       childImageSharp {
-        fixed(height: 120) {
+        fixed(height: 160) {
           ...GatsbyImageSharpFixed
         }
-        fluid(maxHeight: 120) {
+        fluid(maxHeight: 160) {
           ...GatsbyImageSharpFluid
         }
       }

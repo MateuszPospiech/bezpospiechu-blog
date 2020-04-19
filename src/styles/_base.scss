@@ -40,8 +40,12 @@ p {
   border-bottom: 1px solid $border-navbar-light;
   line-height: 1;
 }
-.navbar-light .navbar-nav .nav-item {
-  margin: 8px 0;
+.navbar-light .navbar-nav {
+  align-items: flex-end;
+
+  .nav-item {
+    margin: 8px 0;
+  }
 }
 @media(min-width: 576px) {
   .navbar-light .navbar-nav {

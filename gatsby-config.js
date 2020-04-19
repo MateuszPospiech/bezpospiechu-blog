@@ -45,20 +45,66 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
+        name: `Bez Pośpiechu blog`,
+        short_name: `Posp`,
+        start_url: `/`,
+        lang: `pl`,
+        background_color: `#ffffff`,
+        theme_color: `#0056b3`,
+        display: `standalone`,
         icon: `src/images/icon.png`, // This path is relative to the root of the site.
         icons: [
           {
-            src: `/favicons/android-chrome-192x192.png`,
-            sizes: `192x192`,
-            type: `image/png`,
+            "src": "icons/icon-48x48.png",
+            "sizes": "48x48",
+            "type": "image/png"
           },
           {
-            src: `/favicons/android-chrome-512x512.png`,
-            sizes: `512x512`,
-            type: `image/png`,
+            "src": "icons/icon-72x72.png",
+            "sizes": "72x72",
+            "type": "image/png"
           },
-        ], // Add or remove icon sizes as desired
+          {
+            "src": "icons/icon-96x96.png",
+            "sizes": "96x96",
+            "type": "image/png"
+          },
+          {
+            "src": "icons/icon-144x144.png",
+            "sizes": "144x144",
+            "type": "image/png"
+          },
+          {
+            "src": "icons/icon-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+          },
+          {
+            "src": "icons/icon-256x256.png",
+            "sizes": "256x256",
+            "type": "image/png"
+          },
+          {
+            "src": "icons/icon-384x384.png",
+            "sizes": "384x384",
+            "type": "image/png"
+          },
+          {
+            "src": "icons/icon-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+          }
+        ],
       },
+    },
+    {
+      resolve: 'gatsby-plugin-offline',
+      options: {
+        workboxConfig: {
+          globPatterns: ['**/*']
+        },
+        precachePages: ['**/*'],
+      }
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
