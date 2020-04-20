@@ -43,6 +43,6 @@ const slugify = function(text) {
   
 
  }
- console.log(slugify('ŻÓŁĆ. Chrząszcz. Łódź'));
+//  console.log(slugify('ŻÓŁĆ. Chrząszcz. Łódź'));
  //Web Design => web-design
  module.exports = { slugify }
