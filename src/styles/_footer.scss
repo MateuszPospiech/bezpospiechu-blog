@@ -49,9 +49,6 @@
 .dark {
   .site-footer {
     background-color: $dark-gray;
-    margin-top: 20px;
-    padding: 10px;
-    text-align: center;
     border-top: 1px solid $border-navbar-dark;
 
     a {
@@ -65,32 +62,10 @@
       text-align: center;
   
       ul.social-links-list {
-        margin-top: 10px;
         li {
-          margin-right: 25px;
-          display: inline-block;
   
           a {
             color: $light-gray;
-  
-            &.instagram:hover {
-              color: #e95950;
-            }
-            &.facebook:hover {
-              color: rgb(66, 103, 178);
-            }
-            &.twitter:hover {
-              color: rgb(56, 161, 243);
-            }
-            &.google:hover {
-              color: rgb(221, 75, 57);
-            }
-            &.linkedin:hover {
-              color: rgb(0, 119, 181);
-            }
-            &.youtube:hover {
-              color: #c4302b;
-            }
           }
         }
       }
