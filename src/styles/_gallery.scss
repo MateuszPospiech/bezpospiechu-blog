@@ -1,6 +1,16 @@
-.single_post_gallery {
-   margin-bottom: 15px;
+.masonry_grid {
+   margin-bottom: 2rem;
+    column-count: 3;
+    column-gap: .5rem;
+
    &--item {
-      margin-top: 1em;
+      display: inline-block;
+      margin: 0 0 .3em;
+      width: 100%;
+
+      &:hover {
+         opacity: 0.8;
+         cursor: pointer;
+      }
    }
 }

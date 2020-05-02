@@ -17,6 +17,8 @@ const SinglePost = ({ data, pageContext }) => {
       title: post.title,
       url: baseUrl + pageContext.slug
    }
+   let firstImg = post.galeryImages.slice(0, 1);
+   let lastImg = post.galeryImages.slice(post.galeryImages.length -1);
 
    return (
       <Layout pageTitle={post.title}>
@@ -34,12 +36,22 @@ const SinglePost = ({ data, pageContext }) => {
                <article dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
 
                {/* Temp Galerry */}
-               <div className="row single_post_gallery">
+               <div className="masonry_grid">
+                  {/* {lastImg.map(galeryImage => (
+                     <div className="masonry_grid--item">
+                        <Img fluid={galeryImage.childImageSharp.fluid} alt="BezPospiechu galeria" title="Bez Pospiechu galeria"/>
+                     </div>
+                  ))} */}
                   {post.galeryImages.map(galeryImage => (
-                     <div className="col-12 single_post_gallery--item">
+                     <div className="masonry_grid--item">
                         <Img fluid={galeryImage.childImageSharp.fluid} alt="BezPospiechu galeria" title="Bez Pospiechu galeria"/>
                      </div>
                   ))}
+                  {/* {firstImg.map(galeryImage => (
+                     <div className="masonry_grid--item">
+                        <Img fluid={galeryImage.childImageSharp.fluid} alt="BezPospiechu galeria" title="Bez Pospiechu galeria"/>
+                     </div>
+                  ))} */}
                </div>
                {/* End Temp Galerry */}
 
